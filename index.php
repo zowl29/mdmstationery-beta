@@ -1,0 +1,79 @@
+<?php
+session_start();
+require_once 'includes/functions.inc.php';
+checkLoggedIn(); //check if the user is logged in
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>MDMStationery</title>
+        <link rel="stylesheet" href="css/index.css"> 
+        <link rel="stylesheet" href="css/reset.css"> 
+        
+    </head>
+    
+    <body class="bg-neutral-100">
+        <div class="body-content">
+            <header class="primary-header bg-neutral-100 header-shadow">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#"><img src="img/MDMStationery-Logo-Black.png" alt="MDMStationery"></a>
+                    </div>
+                </div>
+            </header>
+    
+            <main>
+                <section class="padding-block-900">
+                    <div class="container">
+                        <div class="even-columns">
+                            <div class="column">
+                                <h2 class="fs-secondary-heading fw-semi-bold">Welcome to<br>Majlis Daerah Marudi's</h2>
+                                <h1 class="fs-primary-heading fw-bold">Stationery Inventory System</h1>
+                                <a href="signup.php"><button class="filled-button">Sign Up</button></a>
+                                <a href="login.php"><button class="border-button">Log In</button></a>
+                            </div>
+                            <div class="column">
+                                <img src="img/img-stationery.PNG" class="stationery-image" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="bg-neutral-100">
+                <p class="text-neutral-900 fs-footer-text">Copyright 2023. All Rights Reserved</p>
+            </footer>
+        </div>
+    </body>
+</html>
+
+<!--
+            <header>
+            <img src="img/MDMStationery-Logo-Black.png" alt="MDMStationery Logo">
+        </header>
+        <main>
+            <section class="index-content">
+                <div class="container">
+                    <div class="container-grid">
+                        <img src="img/img-stationery.PNG">
+                        <div class="img-shadow"></div>
+                    </div>
+                    <div class="container-grid">
+                        <div class="welcome-container">
+                            <p class="welcome-text">Welcome to<br>Majlis Daerah Marudi</p>
+                            <h1 class="app-name">Stationery Inventory System</h1>
+                            <a href="signup.php" class="signupButton">Sign Up</a>
+                            <a href="login.php" class="loginButton">Log In</a>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <span>Developed by Faizul Afiq</span>
+                </footer>
+            </section>
+        </main>
+        <script src="js/main.js"></script>
+-->

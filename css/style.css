@@ -1,0 +1,141 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    /* do research on units for font-size as well as font-weight */
+    color: black;
+    font-weight: 500;
+}
+
+header {
+    position: fixed; /* search about this */
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+header img {
+    height:4rem;
+}
+
+main {
+    overflow: hidden; /* for the animations scrollreveal */
+}
+
+.index-content {
+    background-color: white;
+    padding: 1rem 0.8rem;
+    height: 100dvh;
+    height: 100vh; 
+    display: grid;
+}
+
+.index-content .container {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+}
+
+
+.welcome-text{
+    display:block;
+}
+
+.app-name, .welcome-text {
+    font-size: 1rem;
+}
+
+.signupButton, .loginButton {
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: green;
+    color: white;
+    padding: .80rem 1.5rem;
+    margin-right: 5px;
+    border-radius: 3rem;
+    transition: .4s;
+    width: 7rem;
+    text-align: center;
+    text-decoration: none; /*remove the underline */
+}
+
+.signupButton:hover, .loginButton:hover {
+    box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
+}
+
+.container-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-grid .welcome-container {
+    text-align: center;
+}
+
+.container-grid img {
+    width: 20rem;
+    animation: floaty 1.8s infinite alternate;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 10px;
+}
+
+/* Animate image */
+@keyframes floaty {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+/* for large devices */
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 7rem;
+    }
+
+    .container-grid img {
+        width: 550px;
+    }
+
+    .container-grid:nth-child(1) {
+        order: 2;
+    }
+
+    .container-grid:nth-child(2) {
+        order: 1;
+    }
+}
+
+/* for tablet */
+@media (min-width:768px) and (max-width: 1023px) {
+    .container-grid img {
+        width: 450px;
+    }
+    
+}

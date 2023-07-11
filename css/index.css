@@ -1,0 +1,114 @@
+/* General styling */
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+    color: var(--clr-primary-400);
+}
+
+button {
+    cursor: pointer;
+    text-decoration: none;
+    border: 20px;
+    border-radius: 100vmax;
+    padding: 0.5em 1em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-button);
+    box-shadow: 0 1.125em 1em -1em var(--clr-accent-400);
+    margin: 1em .25em;
+}
+
+button:hover,
+button:focus-within {
+    background-color: var(--clr-accent-300);
+    color: var(--clr-neutral-100);
+    border: 2px solid var(--clr-accent-300);
+}
+
+.filled-button {
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-100);
+    border: 2px solid var(--clr-accent-400);
+}
+
+.border-button {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-accent-400);
+    border: 2px solid var(--clr-accent-400);
+}
+
+/* Header */
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-wrapper img {
+    height: var(--size-800 );
+    margin: var(--size-300);
+}
+
+/* Body */
+.body-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.stationery-image {
+    animation: floaty 1.8s infinite alternate;
+}
+
+/* Animate image */
+@keyframes floaty {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+footer {
+    padding: var(--size-400);
+    margin-top: auto;
+    text-align: center;
+}
+
+.even-columns {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Desktop */
+@media (min-width: 64em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 48em) and (max-width: 64em) {
+    .column:nth-child(1) {
+        order: 2;
+    }
+
+    .column:nth-child(2) {
+        order: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 48em) {
+    .column:nth-child(1) {
+        order: 2;
+        text-align: center;
+    }
+
+    .column:nth-child(2) {
+        order: 1;
+    }
+}
